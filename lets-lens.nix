@@ -1,5 +1,5 @@
 { mkDerivation, base, containers, directory, doctest, filepath
-, QuickCheck, stdenv, template-haskell
+, QuickCheck, stdenv, template-haskell, hlint
 }:
 mkDerivation {
   pname = "lets-lens";
@@ -7,7 +7,7 @@ mkDerivation {
   src = ./.;
   libraryHaskellDepends = [ base containers ];
   testHaskellDepends = [
-    base directory doctest filepath QuickCheck template-haskell
+    base directory doctest filepath QuickCheck template-haskell hlint
   ];
   homepage = "https://github.com/data61/lets-lens";
   description = "Source code for exercises on the lens concept";
